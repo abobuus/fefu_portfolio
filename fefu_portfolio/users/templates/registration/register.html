@@ -1,0 +1,46 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block content %}
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <img src="{% static 'users/images/img-myuniver-logo.svg' %}" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Tabs Titles -->
+        <h2 class="inactive underlineHover">
+            <a href="{% url 'login' %}" class="login-register">Войти</a>
+        </h2>
+        <h2 class="active">Регистрация</h2>
+
+        <!-- Registration Form -->
+        <form method="post">
+            {% csrf_token %}
+          <input
+            type="text"
+            id="login"
+            class="fadeIn second"
+            name="username"
+            placeholder="Логин"
+          />
+            <input
+              type="text"
+              id="email"
+              class="fadeIn third"
+              name="email"
+              placeholder="Почта"
+            />
+          <input
+            type="text"
+            id="password"
+            class="fadeIn fourth"
+            name="password"
+            placeholder="Пароль"
+          />
+            {{ form.errors }}
+          <input type="submit" class="fadeIn fifth" value="Регистрация"/>
+        </form>
+      </div>
+</div>
+{% endblock %}
