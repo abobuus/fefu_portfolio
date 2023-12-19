@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import FormView
 from django.contrib.auth import get_user_model
 
-from users.forms import RegisterForm
+from users.forms import RegisterForm, RegisterFormPasswords
 
 
 @login_required
@@ -18,7 +18,18 @@ class RegisterView(FormView):
     form_class = RegisterForm
     model = get_user_model()
     template_name = 'registration/register.html'
-    success_url = reverse_lazy("profile")
+    success_url = reverse_lazy("login")
+
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
+
+
+class RegisterViewPasswords(FormView):
+    form_class = RegisterFormPasswords
+    model = get_user_model()
+    template_name = 'registration/register_passwords.html'
+    success_url = reverse_lazy("login")
 
     def form_valid(self, form):
         form.save()
