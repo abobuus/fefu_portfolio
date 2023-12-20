@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>
+		Build a Survey Form using HTML and CSS
+	</title>
+
+	<style>
+		body {
+			background-color: #f2fafe;
+			font-family: Verdana;
+			text-align: center;
+            margin-top: 50px;
+		}
+
+		form {
+			background-color: #fff;
+			max-width: 700px;
+			margin: 46px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+        .PS {
+            font-size: 15px;
+            font-style: normal;
+            color: #777;
+        }
+
+		button {
+			background-color: #76c0e0;
+			border: 1px solid #777;
+			border-radius: 5px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 70%;
+			margin-top: 50px;
+			margin-bottom: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Спортивная деятельность. Регистрация достижения.</h1>
+	<form id="form">
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Фамилия Имя Отчество
+			</label>
+			<input type="text"
+				id="name"
+				placeholder="Enter" />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Корпоративная почта
+			</label>
+			<input type="email" id="email" placeholder="Enter your email" />
+		</div>
+        
+        <div class="form-control">
+			<label>
+				1. Тип спортивного достижения
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed">Знак отличия ВФСК ГТО</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed">Победа/призовое место в спортивном мероприятии</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="recommed-3" name="recommed">Сопровождение одного из направлений мероприятия ДВФУ(техническая группа, ведущие, фото-/видео- съемка)</input>
+			</label>
+            <label for="recommed-4">
+				<input type="radio" id="recommed-4" name="recommed">Спортивный разряд/звание</input>
+			</label>
+            <label for="recommed-5">
+				<input type="radio" id="recommed-5" name="recommed">Судейство мероприятия</input>
+			</label>
+		</div>
+		
+        <div class="form-control">
+			<label>
+				2. Вид знака отличия ВФСК ГТО
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="lvlm" name="recommed">Золотой</input>
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="lvlm" name="recommed">Серебряный</input>
+			</label>
+			<label for="recommed-1">
+				<input type="radio" id="lvlm" name="recommed">Бронзовый</input>
+			</label>
+		</div>
+		
+
+        <div class="form-control">
+			<label for="recommed-1" id="recommed-1">
+                3. Название знака отличия ВФСК
+			</label>
+			<input type="text" id="name-gto" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-1" id="recommed-1">
+                4. Уникальный идентификационный номер
+			</label>
+			<input type="text" id="num-gto" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-1" id="recommed-1">
+                5. Номер удостоверения о награждении знаком отличия ВФСК ГТО
+			</label>
+			<input type="text" id="num-gto-pas" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-1" id="recommed-1">
+                6. Дата приказа о награждении
+			</label>
+			<input type="date" id="num-gto-pas-date" placeholder="" />
+		</div>
+		
+        <div class="form-control">
+			<label>
+				7. Роль в проведении
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="role">Судья</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="role">Секретарь</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="role">Ведущий</input>
+			</label>
+            <label for="recommed-3">
+				<input type="radio" id="role">Техническая группа</input>
+			</label>
+            <label for="recommed-3">
+				<input type="radio" id="role">Фото, видеосъемка</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label>
+				8. Мероприятие включено в официальные календари организаций, занимающихся проведением студенческих соревнований? 
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="Y-N8">Да</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="Y-N8">Нет</input>
+			</label>
+		</div>
+        
+        <div class="form-control">
+			<label>
+                9. Принадлежность к сборной ДВФУ?
+		    </label>
+			<label for="recommed-2">
+				<input type="radio" id="Y-N9">Да</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="Y-N9">Нет</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label>
+                10. Достижение
+		    </label>
+			<label for="recommed-2">
+				<input type="radio" id="lvlp">1 место</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="lvlp">2 место</input>
+			</label>
+            <label for="recommed-2">
+				<input type="radio" id="lvlp">3 место</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label>
+                11. Уровень(статус) мероприятия
+		    </label>
+			<label for="recommed-2">
+				<input type="radio" id="lvl-status">Внутривузовский</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="lvl-status">Региональный</input>
+			</label>
+            <label for="recommed-2">
+				<input type="radio" id="lvl-status">Межрегиональный(ДВФО)</input>
+			</label>
+            <label for="recommed-2">
+				<input type="radio" id="lvl-status">Всеросийский</input>
+			</label>
+            <label for="recommed-2">
+				<input type="radio" id="lvl-status">Международный</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-2" id="recommed-2">
+                12. Название спортивного мероприятия
+			</label>
+			<input type="text" id="name-mer" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-2" id="recommed-2">
+                13. Ссылка на мероприятие(с указанием результата выступления)
+			</label>
+			<input type="text" id="link-mer" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-2" id="recommed-2">
+               14. Место проведения/площадка
+			</label>
+			<input type="text" id="location" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-2" id="recommed-2">
+               15. Проводящая организация
+			</label>
+			<input type="text" id="link-mer" placeholder="" />
+		</div>
+
+
+        <div class="form-control">
+			<label for="recommed-2" id="date">
+               16. Дата проведения - начало
+			</label>
+			<input type="date" id="start-date" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-2" id="date">
+               17. Дата проведения - окончание
+               <div class = "PS">
+                    Если событие длилось один день - ставьте ту же дату
+               </div>
+			</label>
+			<input type="date" id="end-date" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label>
+                18. Наименование разряда/звания
+		    </label>
+			<label for="recommed-4">
+				<input type="radio" id="zvanie">Мастер спорта международного класса</input>
+			</label>
+			<label for="recommed-4">
+				<input type="radio" id="zvanie">Мастер спорта России</input>
+			</label>
+            <label for="recommed-4">
+				<input type="radio" id="zvanie">Гроссмейстер России</input>
+			</label>
+            <label for="recommed-4">
+				<input type="radio" id="zvanie">Кандидат в мастера спорта</input>
+			</label>
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-4" id="recommed-4">
+               19. Вид спорта
+			</label>
+			<input type="text" id="vsport" placeholder="" />
+		</div>
+
+        <div class="form-control">
+			<label for="recommed-4" id="recommed-4">
+               20. Дата присвоения
+			</label>
+			<input type="date" id="date-p" placeholder="" />
+		</div>
+
+        <div class="form-control">
+            <label for="file">
+                21. Подтверждающий документ
+                <div class = "PS">
+                    Подтвеождающим документом для победы в спортивных мероприятиях является протокол соревнований, 
+                    подписанный оргкомитетом или главной судейской коллегией (для победы в спортинвых мероприятих).
+
+                    Если документов много, используйте PDF.
+                    Если подтверждающий документ написан на иностранном языке, необходимо также приложить заверенный перевод.
+                </div>
+            </label>
+            <input type="file" id="file" name="file" accept=".pdf, .jpg, .jpeg, .png" max="1" />
+            <div class = "PS">
+                Максимальное число файлов: 1, Максимальный размер одного файла: 10MB, Разрешенные типы файлов: PDF, Изображение
+           </div>
+        </div>
+
+        <div class="form-control">
+			<label>
+                22. Заявитель несет ответсвтенность за предоставление информации в соответствии с 
+                Законодательством Российской Федерации и нормативными локальными актами ДВФУ
+			</label>
+			<label for="recommed">
+				<input type="radio" id="sogl">Подтверждаю</input>
+			</label>
+		</div>
+
+        <button type="submit" value="submit">
+            Отправить
+        </button>
+    </form>
+</body>
+</html>
+		
