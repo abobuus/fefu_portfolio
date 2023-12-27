@@ -5,6 +5,7 @@ from django.db import models
 
 
 class User(AbstractUser):
+    DoesNotExist = None
     pass
 
     def __str__(self):
