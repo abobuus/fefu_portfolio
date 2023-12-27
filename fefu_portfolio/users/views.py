@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import FormView
 from django.contrib.auth import get_user_model
-
+from rest_framework import views
 from users.forms import RegisterForm, RegisterFormPasswords
 
 
@@ -34,5 +34,4 @@ class RegisterViewPasswords(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
-
 

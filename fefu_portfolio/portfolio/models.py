@@ -248,7 +248,3 @@ class SportsCategoryOrTitle(models.Model):
     class Meta:
         verbose_name = 'Спортивные разряды/звания'
         verbose_name_plural = 'Спортивные разряды/звания'
-
-
-
-
